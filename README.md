@@ -1,1 +1,4 @@
 # inkwellinteractive
+---
+permalink: /index.html
+---
