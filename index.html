@@ -3,8 +3,47 @@
   <head>
     <meta charset="UTF-8">
     <title>Inkwell Interactive</title>
+    <style>
+    	.logo {
+    		display: block;
+    		margin: 0 auto;
+    		max-width: 50vw;
+    	}
+    	.contact {
+    		display: flex;
+    		align-items: center;
+    		flex-direction: column;
+    		justify-content: center;
+    		width: 100%;
+    		font-family: Verdana, Geneva, sans-serif;
+    	}
+    	.button {
+    		background: #000000;
+    		color: #fff;
+    		height: 40px;
+    		width: 80px;
+    	}
+    	.button:hover {
+    		cursor: pointer;		
+    		opacity: .9;
+    	}
+    	.mail {
+    		margin-top: 25px;
+    	}
+    </style>
   </head>
   <body>
-    <img src="logo1dark.png" style="height: 80vh; width: auto; display: block; margin: 0 auto;" />
+    <img class="logo" src="logo1dark.png"/>
+    <div class="contact">
+    	<h3>For Sale of Domain</h3>
+    	<button class="button" id="button" onclick="contact()">Contact</button>
+    	<div class="mail" id="mail"></div>
+    </div>
+    <script>
+    	function contact() {
+    		const b64 = 'YmVuc0Bpbmt3ZWxsaW50ZXJhY3RpdmUuY29t';
+    		document.getElementById("mail").innerHTML = atob(b64);
+    	}
+    </script>
   </body>
 </html>
